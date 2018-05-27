@@ -1,17 +1,23 @@
+/***************************************************************************************************
+*                                libhsp3-data-func version 0.1 beta                                *
+*                                        Made by Mikatofu31                                        *
+*                                          on 05/27/2018                                           *
+***************************************************************************************************/
+
 #module libhsp3_data
-	#defcfunc fn_getline var string,int linenum
+	#defcfunc fn_getline var sourcestring,int linenum
 		sdim notepad_var,131072
-		notesel string
+		notesel sourcestring
 		noteget notepad_var,linenum
 	return notepad_var
 	
-	#defcfunc fn_max var string
-		notesel string
+	#defcfunc fn_max var sourcestring
+		notesel sourcestring
 	return notemax
 	
-	#defcfunc fn_size var string
-		notesel string
-	return notemax
+	#defcfunc fn_size var sourcestring
+		notesel sourcestring
+	return notesize
 	
 	#defcfunc fn_grep var string,str grepstr
 		sdim notepad_var,131072

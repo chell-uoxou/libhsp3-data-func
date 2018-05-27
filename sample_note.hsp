@@ -1,0 +1,44 @@
+/***************************************************************************************************
+*                                    libhsp3-data-func sample1                                     *
+*                                        Made by Mikatofu31                                        *
+*                                          on 05/27/2018                                           *
+***************************************************************************************************/
+/*  What's this?
+	libhsp3-data-funcの使い方とサンプルコード集です。(未完成)
+/* ↓サンプルコード
+
+/**************************************************************************************************/
+#include "libhsp3_data_func.as"
+/*
+・fn_getline(var sourcestring,int linenum)
+	HSP3標準命令のnoteget命令と同機能です。
+	sourcestringのlinenum行目を取り出してstr型で返します。
+*/
+	sample="abc\ndef\nghi\njkl\nmno"
+	mes "もとの文字列:\n"+sample
+	mes "3行目の文字列:"+fn_getline(sample,2)
+
+/*
+・fn_max(var sourcestring)
+	HSP3標準マクロのnotemaxと同機能です。
+	sourcestringの行数を取り出してint型で返します。
+*/
+	mes "もとの文字列の行数:"+fn_max(sample)
+
+/*
+・fn_size(var sourcestring)
+	HSP3標準マクロのnotesizeと同機能です。
+	sourcestringの行数を取り出してint型で返します。
+*/
+	mes "もとの文字列の文字数:"+fn_size(sample)
+
+/*
+・fn_grep(var sourcestring,str grepstr)
+	巷でよく使われるgrep(のつもり)です。
+	sourcestringから、grepstrを含む行をすべて取り出して、str型で返します。
+*/
+	mes "\n"
+	sample="lol\nrofl\nlmao\nlmfao"
+	mes "もとの文字列:\n"+sample
+	mes "fを含む行:\n"+fn_grep(sample,"f")
+
