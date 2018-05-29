@@ -9,7 +9,7 @@ HSPがインストールされているフォルダ下の、「common」というフォルダ下に「libhsp3_d
 と記述すると使用できます。
 
 ## Supported version
-Windows版HSP3.4以降に対応しています。Linux版やHSP3Dish版では動作確認しておりません。x
+Windows版HSP3.4以降に対応しています。Linux版やHSP3Dish版では動作確認しておりません。
 
 ## License
 see "License.txt".
